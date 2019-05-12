@@ -1,7 +1,10 @@
 // code with React Hooks
 
 import React, { Fragment, useState } from 'react';
+import cn from 'classnames';
+import '../../styles/styles.scss';
 import '../../styles/goodybags.scss';
+import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 
 const App = () => {
 
@@ -29,12 +32,14 @@ const App = () => {
       if(i === index) { 
         return (
           <Fragment key={goodybag.sku}>
-            <div className={goodybag.sku}></div>
-            <div>£{goodybag.price / 100} goodybag</div>
-            <div>{goodybagDataSizeDefined} data</div>
-            <div>{goodybag.maxVoice} minutes</div>
-            <div>{goodybag.maxTexts} texts</div>
-            { goodybag.promoCaption && <div>{goodybag.promoCaption} texts</div> }
+            <div className={cn(goodybag.sku, "goodybag__sku")}></div>
+            {/* <div className="goodybag__price">£{goodybag.price / 100} goodybag</div> */}
+            <div className="goodybag__max-data"><span className="text-bolder">{goodybagDataSizeDefined}</span> data</div>
+            <div className="goodybag__max-voice"><span className="text-bolder">{goodybag.maxVoice}</span> minutes</div>
+            <div className="goodybag__max-texts"><span className="text-bolder">{goodybag.maxTexts}</span> texts</div>
+            { goodybag.promoCaption && 
+              <div className="goodybag__promo-caption">{goodybag.promoCaption}</div> 
+            }
           </Fragment>
         )
       } else { return null }
@@ -55,11 +60,19 @@ const App = () => {
   }
 
   return (
-    <div>
-      {renderGoodybag(activeGoodybagIndex)}
-      <button onClick={handlePrevious}>&lt;</button>
-      <button onClick={handleNext}>&gt;</button>
-      <p>See all plans</p>
+    <div className="goodybag">
+      <div className="goodybag__previous-button" onClick={handlePrevious}><i className="fa fa-chevron-left"></i></div>
+      <div className="goodybag__text">
+        {renderGoodybag(activeGoodybagIndex)}
+        <div className="goodybag__all-plans">
+          <div className="all-plans-text">See all plans </div>
+          <i className="fa fa-caret-right"></i>
+        </div>
+      </div>     
+      <div className="goodybag__next-button" onClick={handleNext}><i className="fa fa-chevron-right"></i>
+
+</div>
+      
     </div>
   )  
 }

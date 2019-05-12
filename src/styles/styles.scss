@@ -1,0 +1,49 @@
+.goodybag {
+  //border: 1px solid red;
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  font-size: 20px;
+  font-family: sans-serif;
+
+  &__text {
+    //border: 1px solid blue;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+    &__sku,
+    &__price,
+    &__max-data,
+    &__max-voice,
+    &__max-texts,
+    &__promo-caption {
+      line-height: 26px;
+    }
+
+  &__previous-button,
+  &__next-button {
+    font-size: 50px;
+    align-self: center;
+  }
+
+  &__all-plans {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+
+// BEM classes to be refactored to include below
+
+.text-bolder {
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.all-plans-text {
+  margin-right: 10px;
+}
