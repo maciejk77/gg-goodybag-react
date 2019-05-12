@@ -32,7 +32,11 @@ const App = () => {
       if(i === index) { 
         return (
           <Fragment key={goodybag.sku}>
-            <div className={cn(goodybag.sku, "goodybag__sku")}></div>
+            <div className="goodybag-selector">
+              <div className="goodybag__previous-button" onClick={handlePrevious}><i className="fa fa-chevron-left"></i></div>
+              <div className={cn(goodybag.sku, "goodybag__sku")}></div>
+              <div className="goodybag__next-button" onClick={handleNext}><i className="fa fa-chevron-right"></i></div>
+            </div>
             {/* <div className="goodybag__price">£{goodybag.price / 100} goodybag</div> */}
             <div className="goodybag__max-data"><span className="text-bolder">{goodybagDataSizeDefined}</span> data</div>
             <div className="goodybag__max-voice"><span className="text-bolder">{goodybag.maxVoice}</span> minutes</div>
@@ -61,18 +65,13 @@ const App = () => {
 
   return (
     <div className="goodybag">
-      <div className="goodybag__previous-button" onClick={handlePrevious}><i className="fa fa-chevron-left"></i></div>
       <div className="goodybag__text">
         {renderGoodybag(activeGoodybagIndex)}
         <div className="goodybag__all-plans">
           <div className="all-plans-text">See all plans </div>
           <i className="fa fa-caret-right"></i>
         </div>
-      </div>     
-      <div className="goodybag__next-button" onClick={handleNext}><i className="fa fa-chevron-right"></i>
-
-</div>
-      
+      </div>       
     </div>
   )  
 }
