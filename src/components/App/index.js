@@ -33,11 +33,11 @@ const App = () => {
         return (
           <Fragment key={goodybag.sku}>
             <div className="goodybag-selector">
-              <div className="goodybag__previous-button" onClick={handlePrevious}><i className="fa fa-chevron-left"></i></div>
+              <div className="goodybag__previous-button" onClick={handlePrevious}><i data-cy="prev" className="fa fa-chevron-left"></i></div>
               <div className={cn(goodybag.sku, "goodybag__sku")}></div>
-              <div className="goodybag__next-button" onClick={handleNext}><i className="fa fa-chevron-right"></i></div>
+              <div className="goodybag__next-button" onClick={handleNext}><i data-cy="next" className="fa fa-chevron-right"></i></div>
             </div>
-            {/* <div className="goodybag__price">£{goodybag.price / 100} goodybag</div> */}
+            <div className="goodybag__price" data-cy="price">£{goodybag.price / 100} goodybag</div>
             <div className="goodybag__max-data"><span className="text-bolder">{goodybagDataSizeDefined}</span> data</div>
             <div className="goodybag__max-voice"><span className="text-bolder">{goodybag.maxVoice}</span> minutes</div>
             <div className="goodybag__max-texts"><span className="text-bolder">{goodybag.maxTexts}</span> texts</div>

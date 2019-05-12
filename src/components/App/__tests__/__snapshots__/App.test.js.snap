@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders <App /> 1`] = `
+<div
+  className="goodybag"
+>
+  <div
+    className="goodybag__text"
+  >
+    <div
+      className="goodybag-selector"
+    >
+      <div
+        className="goodybag__previous-button"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-chevron-left"
+          data-cy="prev"
+        />
+      </div>
+      <div
+        className="BD27 goodybag__sku"
+      />
+      <div
+        className="goodybag__next-button"
+        onClick={[Function]}
+      >
+        <i
+          className="fa fa-chevron-right"
+          data-cy="next"
+        />
+      </div>
+    </div>
+    <div
+      className="goodybag__price"
+      data-cy="price"
+    >
+      £
+      10
+       goodybag
+    </div>
+    <div
+      className="goodybag__max-data"
+    >
+      <span
+        className="text-bolder"
+      >
+        3 GB
+      </span>
+       data
+    </div>
+    <div
+      className="goodybag__max-voice"
+    >
+      <span
+        className="text-bolder"
+      >
+        Unlimited
+      </span>
+       minutes
+    </div>
+    <div
+      className="goodybag__max-texts"
+    >
+      <span
+        className="text-bolder"
+      >
+        Unlimited
+      </span>
+       texts
+    </div>
+    <div
+      className="goodybag__all-plans"
+    >
+      <div
+        className="all-plans-text"
+      >
+        See all plans 
+      </div>
+      <i
+        className="fa fa-caret-right"
+      />
+    </div>
+  </div>
+</div>
+`;
